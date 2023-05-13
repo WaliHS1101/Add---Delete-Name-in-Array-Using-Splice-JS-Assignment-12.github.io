@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .Add {
+            border: 0px;
+            background-color: rgb(156, 147, 136);
+            padding: 4px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-left: 45%;
+            margin-right: 2%;
+        }
+
+        .Add:hover {
+            background-color: rgb(223, 182, 132);
+        }
+
+        .Delete {
+            border: 0px;
+            background-color: rgb(156, 147, 136);
+            padding: 4px;
+            padding-left: 17px;
+            padding-right: 17px;
+            border-radius: 20px;
+        }
+
+        .Delete:hover {
+            background-color: rgb(223, 182, 132);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="N1"></h1>
+
+    <button class="Add" onclick="Add()">Add</button>
+
+    <button class="Delete" onclick="Delete()">Delete</button>
+
+    <script>
+
+        let arr = ["Ahmed", "Sheraz", "Muzammil", "Adeel", "A Q Khan"];
+
+        let a = document.getElementById("N1").innerHTML = arr;
+
+        function Add() {
+            let ar = a.splice(parseInt(prompt("Where you want to Add Name Enter index Number")), 0, prompt("Enter Name"));
+            let b = document.getElementById("N1").innerHTML = arr;
+        }
+
+        function Delete() {
+            let ar = a.splice(parseInt(prompt("Enter index Number You want to delete")), 1);
+            let b = document.getElementById("N1").innerHTML = arr;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
